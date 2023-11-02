@@ -103,11 +103,7 @@ inputElements.forEach(inputElement => {
     });
 });
 
-const searchForm = document.querySelector("form");
-document.getElementById("search-button").addEventListener("click", function(e) {
-        e.preventDefault(); // Prevent the form from submitting
-        searchForm.reset(); // Reset the form to clear the input values
-});
+
 
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.querySelector('form');
@@ -122,9 +118,11 @@ document.addEventListener('DOMContentLoaded', function () {
             e.preventDefault();
         } else {
             alert('Success in submitting'); // Displays a success message if validation is met
+            form.reset(); // Reset the form to its initial (empty) state
         }
     });
 });
+
 
 
 
