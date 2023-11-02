@@ -119,10 +119,13 @@ document.addEventListener('DOMContentLoaded', function () {
     searchButton.addEventListener('click', function (e) {
         if (!dateInput.checkValidity() || travelTypeSelect.value === "") {
             alert('Please fill in the required fields: Date and Travel Type');
-            e.preventDefault(); i
+            e.preventDefault();
+        } else {
+            alert('Success in submitting'); // Menampilkan pesan sukses jika validasi terpenuhi
         }
     });
 });
+
 
 
 
