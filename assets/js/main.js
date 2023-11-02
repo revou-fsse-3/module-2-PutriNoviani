@@ -115,13 +115,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const travelTypeSelect = document.getElementById('travel-type');
     const searchButton = document.getElementById('search-button');
 
-    // Menambahkan event listener ke tombol "search-button"
+    // Get a reference to the "search-button" element by its ID
     searchButton.addEventListener('click', function (e) {
         if (!dateInput.checkValidity() || travelTypeSelect.value === "") {
             alert('Please fill in the required fields: Date and Travel Type');
             e.preventDefault();
         } else {
-            alert('Success in submitting'); // Menampilkan pesan sukses jika validasi terpenuhi
+            alert('Success in submitting'); // Displays a success message if validation is met
         }
     });
 });
