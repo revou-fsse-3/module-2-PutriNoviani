@@ -104,10 +104,29 @@ inputElements.forEach(inputElement => {
 });
 
 const searchForm = document.querySelector("form");
-    document.getElementById("search-button").addEventListener("click", function(e) {
+document.getElementById("search-button").addEventListener("click", function(e) {
         e.preventDefault(); // Prevent the form from submitting
         searchForm.reset(); // Reset the form to clear the input values
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.querySelector('form');
+    const dateInput = document.getElementById('date');
+    const travelTypeSelect = document.getElementById('travel-type');
+    const searchButton = document.getElementById('search-button');
+
+    // Menambahkan event listener ke tombol "search-button"
+    searchButton.addEventListener('click', function (e) {
+        if (!dateInput.checkValidity() || travelTypeSelect.value === "") {
+            alert('Please fill in the required fields: Date and Travel Type');
+            e.preventDefault(); i
+        }
     });
+});
+
+
+
+
 
 
 
