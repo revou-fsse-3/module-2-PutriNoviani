@@ -4,14 +4,14 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
-    src: url('assets/font_face/Montserrat-Medium.ttf') format('truetype');
+    src: url('assets/font/Montserrat-Medium.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
-    src: url('assets/font_face/Montserrat-SemiBold.ttf') format('truetype');
+    src: url('assets/font/Montserrat-SemiBold.ttf') format('truetype');
 }
 
 /* Define Poppins font using @font-face */
@@ -19,14 +19,14 @@
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
-    src: url('assets/font_face/Poppins-Medium.ttf') format('truetype');
+    src: url('assets/font/Poppins-Medium.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
-    src: url('assets/font_face/Poppins-Regular.ttf') format('truetype');
+    src: url('assets/font/Poppins-Regular.ttf') format('truetype');
 }
 
 /*=============== VARIABLES CSS ===============*/
@@ -390,7 +390,7 @@ img {
 
 .home__form-group select {
     width: 100%;
-    padding: 10px 0px;
+    padding: 13px 0px;
     font-size: var(--small-font-size);
     outline: none;
     border: none;
@@ -931,7 +931,7 @@ img {
     .join__container {
         grid-template-columns: repeat(2, 350px);
         align-items: center;
-        column-gap: 4rem;
+        column-gap: 1rem;
         padding-block: 1rem 3rem;
     }
 
