@@ -859,10 +859,6 @@ button {
         width:auto;
     }
 
-    .swiper-slide#slide-2 {
-        display: block;
-    }
-
     .footer__data {
         grid-template-columns: max-content;
     }
