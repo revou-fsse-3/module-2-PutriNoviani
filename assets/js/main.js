@@ -38,6 +38,36 @@ const blurHeader = () =>{
 }
 window.addEventListener('scroll', blurHeader)
 
+/*==================== DARK LIGHT THEME ====================*/ 
+const themeButton = document.getElementById('theme-button')
+const lightTheme = 'light-theme'
+const iconTheme = 'ri-moon-line'
+
+// Previously selected topic (if user selected)
+const selectedTheme = localStorage.getItem('selected-theme')
+const selectedIcon = localStorage.getItem('selected-icon')
+
+// We obtain the current theme that the interface has by validating the dark-theme class
+const getCurrentTheme = () => document.body.classList.contains(lightTheme) ? 'light' : 'dark'
+const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'ri-moon-line' : 'ri-sun-line'
+
+// We validate if the user previously chose a topic
+if (selectedTheme) {
+    // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark 
+    document.body.classList[selectedTheme === 'light' ? 'add' : 'remove'](lightTheme)
+    themeButton.classList[selectedIcon === 'ri-moon-line' ? 'add' : 'remove'](iconTheme)
+}
+
+// Activate / deactivate the theme manually with the button
+themeButton.addEventListener('click', () => {
+    // Add or remove the dark / icon theme
+    document.body.classList.toggle(lightTheme)
+    themeButton.classList.toggle(iconTheme)
+    // We save the theme and the current icon that the user chose
+    localStorage.setItem('selected-theme', getCurrentTheme())
+    localStorage.setItem('selected-icon', getCurrentIcon())
+})
+
 /*=============== SHOW SCROLL UP ===============*/ 
 const scrollUp = () =>{
 	const scrollUp = document.getElementById('scroll-up')
@@ -56,51 +86,10 @@ const sr = ScrollReveal({
     // reset: true // Animations repeat
 })
 
-sr.reveal(`.home__data, home__form-group,.footer__container`)
+sr.reveal(`.slider,.footer__container`)
 sr.reveal(`.join__form`, {origin: 'right'})
 sr.reveal(`.join__data`, {origin: 'left'})
-sr.reveal('.home__form-group', { origin: 'top', distance: '50px', duration: 1500, delay: 200 });
-sr.reveal('.about__container', { origin: 'top', distance: '50px', duration: 1500, delay: 200 });
-sr.reveal(`.popular__card`, {interval: 200})
-
-// Find all input elements in class "input__group"
-const inputElements = document.querySelectorAll('.input__group input');
-// Loop through each input element
-inputElements.forEach(inputElement => {
-    inputElement.addEventListener('focus', () => {
-        // Focus enters the input
-        inputElement.nextElementSibling.style.top = '0';
-        inputElement.nextElementSibling.style.fontSize = '0.8rem';
-    });
-
-    inputElement.addEventListener('blur', () => {
-        // Focus exits the input
-        if (inputElement.value === '') {
-            inputElement.nextElementSibling.style.top = '50%';
-            inputElement.nextElementSibling.style.fontSize = 'var(--h3-font-size)';
-        }
-    });
-});
-
-
-
-document.addEventListener('DOMContentLoaded', function () {
-    const form = document.querySelector('form');
-    const dateInput = document.getElementById('date');
-    const travelTypeSelect = document.getElementById('travel-type');
-    const searchButton = document.getElementById('search-button');
-
-    // Get a reference to the "search-button" element by its ID
-    searchButton.addEventListener('click', function (e) {
-        if (!dateInput.checkValidity() || travelTypeSelect.value === "") {
-            alert('Please fill in the required fields: Date and Travel Type');
-            e.preventDefault();
-        } else {
-            alert('Success in submitting'); // Displays a success message if validation is met
-            form.reset(); // Reset the form to its initial (empty) state
-        }
-    });
-});
+sr.reveal(`.popular__container`, {interval: 200})
 
 
 

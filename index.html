@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!--=============== REMIXICONS ===============-->
         <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+        <!--=============== SWIPER CSS ===============--> 
+        <link rel="stylesheet" href="assets/CSS/swiper-bundle.min.css">
         <!--=============== CSS ===============-->
         <link rel="stylesheet" href="assets/css/style.css">
         <title>Responsive travel website</title>
@@ -32,6 +34,8 @@
                     <li class="nav__item">
                         <a href="#explore" class="nav__link">Explore</a>
                     </li>
+                    <li><i class='ri-sun-line nav__theme' id="theme-button"></i></li>
+                    <li href="#" class="button button--home">Login</li>
                 </ul>
                 
                 <!-- Close button -->
@@ -50,349 +54,404 @@
     <!--==================== MAIN ====================-->
     <main class="main">
         <!--==================== HOME ====================-->
-        <section class="home section" id="home">
-            <img src="assets/Image/borabora.jpg" alt="home image" class="home__bg">
-            <div class="home__shadow"></div>
-            
-            <div class="home__container container grid">
-                <div class="home__data">
-                    <h3 class="home__subtitle">
-                        Welcome To Travel
-                    </h3>
-                    
-                    <h1 class="home__title">
-                        Explore <br>
-                        The World
-                    </h1>
-                    
-                    <p class="home__description">
-                        Immerse yourself in the beauty of the world's paradises, islands, and mountains. Your extraordinary voyage begins right away.
-                    </p>
-                    
-                    <a href="#" class="button">
-                        Start Your Journey <i class="ri-arrow-right-line"></i>
-                    </a>
-                </div>
-                
-                <!-- Form group for location, date, and minimum people -->
-                <div class="home__form-group">
-                    <form>
-                        <div class="form__group" id="form__group">
-                            <div class="input__group">
-                                <input type="text" id="location" required/>
-                                <label for="location">Location</label>
+        <section class="home container" id="home">
+            <div class="slider">
+                <div class="swiper-wrapper">
+                    <!-- HOME SLIDER 1 -->
+                    <section class="swiper-slide" id="slide1">
+                        <div class="home__content grid">
+                            <div class="home__group">
+                                <img src="assets/Image/hero-banner.png" alt="" class="home__img">
+                                <div class="home__indicator"></div>
+                                
+                                <div class="home__details-img">
+                                    <h4 class="home__details-title">Your Local Guide</h4>
+                                    <span class="home__details-subtitle">Discover with Us</span>
+                                </div>
                             </div>
-                            <p>Where are you going?</p>
-                        </div>
-                        <div class="form__group">
-                            <div class="input__group">
-                                <input class="textbox-n" type="text" onfocus="(this.type='date')" onblur="if(!this.value) this.type='text'" id="date" required/>
-                                <label for="date">Departure</label>
+                            
+                            <div class="home__data">
+                                <h3 class="home__subtitle">#1 Explore Exotic Destinations</h3>
+                                <h1 class="home__title">UNLEASH <br> YOUR <br>WANDERLUST</h1>
+                                <p class="home__description">Join us on a journey to the most breathtaking and exotic 
+                                    destinations around the world. Get ready to immerse yourself in the wonders of nature, 
+                                    culture, and adventure. Our mission is to make your 
+                                </p>
+                                
+                                <div class="home__buttons">
+                                    <a href="#" class="button">Start Your Journey</a>
+                                    <a href="#" class="button--link button--flex">See All<i class="ri-arrow-right-line"></i></a>
+                                </div>
                             </div>
-                            <p>Add date</p>
                         </div>
-                        <div class="form__group">
-                            <div class="input__group">
-                                <label for="travel-type"></label>
-                                <select id="travel-type" required>
-                                    <option value=""selected></option>
-                                    <option value="exotic">Exotic</option>
-                                    <option value="budget">On Budget</option>
-                                    <option value="romantic">Romantic</option>
-                                    <option value="sightseeing">SightSeeing</option>
-                                    <option value="vacation">Vacation</option>
-                                </select>
-                                <label>Travel Type</label>
+                    </section>
+                    
+                    <!-- HOME SLIDER 2 -->
+                    <section class="swiper-slide" id="slide2">
+                        <div class="home__content grid">
+                            <div class="home__group">
+                                <img src="assets/Image/hero-banner.png" alt="" class="home__img">
+                                <div class="home__indicator"></div>
+                                
+                                <div class="home__details-img">
+                                    <h4 class="home__details-title">Meet Our Expert Explorer</h4>
+                                    <span class="home__details-subtitle">Captain Adventure</span>
+                                </div>
                             </div>
-                            <p>Choose Type</p>
-                        </div>
-                        <div class="form__group">
-                            <div class="input__group">
-                                <input type="number" id="number" required/>
-                                <label for="number">Travellers</label>
+                            
+                            <div class="home__data">
+                                <h3 class="home__subtitle">#2 Experience Adventure Travel</h3>
+                                <h1 class="home__title">THRILL-SEEKERS <br>WELCOME!</h1>
+                                <p class="home__description">Are you an adrenaline junkie looking for your next thrill? 
+                                    Look no further! Our adventure travel packages will take you to the edge and back. 
+                                    From white-water rafting in remote canyons to hiking in the world's most challenging terrains, we've got your adventure covered
+                                    
+                                    <div class="home__buttons">
+                                        <a href="#" class="button">Start Your Journey</a>
+                                        <a href="#" class="button--link button--flex">See All<i class="ri-arrow-right-line"></i></a>
+                                    </div>
+                                </div>
                             </div>
-                            <p>Add guests</p>
-                        </div>
-                    </form>  
-                    <button class="home__form-group-button button" id="search-button" aria-label="Search"><i class="ri-search-line"></i></button>
-                </div>
-            </div>
-        </section>
-        <!--==================== About ====================-->
-        <section class="about section" id="about" role="region" aria-labelledby="about-heading">
-            <div class="about__container container grid">
-                <div class="about__text">
-                    <h2 id="about-heading" class="section__title">About Us</h2>
-                    <div class="section__description">
-                        Get to know more about our travel company.
-                    </div>
-                </div>
-                
-                <!-- Card 1 -->
-                <div class="about__card about__card-1">
-                    <img src="assets/Image/card-1.jpg" alt="Card 1 Image">
-                    <div class="about__card-info">
-                        <h3 class="about__card-title">Card 1</h3>
-                        <p class="about__card-description">Description for Card 1.</p>
-                    </div>
-                </div>
-                
-                <!-- Card 2 -->
-                <div class="about__card about__card-2">
-                    <img src="assets/Image/card-2.jpg" alt="Card 2 Image">
-                    <div class="about__card-info">
-                        <h3 class="about__card-title">Card 2</h3>
-                        <p class="about__card-description">Description for Card 2.</p>
-                    </div>
-                </div>
-                
-                <!-- Card 3 -->
-                <div class="about__card about__card-3">
-                    <img src="assets/Image/card 3.jpg" alt="Card 3 Image">
-                    <div class="about__card-info">
-                        <h3 class="about__card-title">Card 3</h3>
-                        <p class="about__card-description">Description for Card 3.</p>
-                    </div>
-                </div>
-                
-                <!-- Card 4 -->
-                <div class="about__card about__card-4">
-                    <img src="assets/Image/card-4.jpg" alt="Card 4 Image">
-                    <div class="about__card-info">
-                        <h3 class="about__card-title">Card 4</h3>
-                        <p class="about__card-description">Description for Card 4.</p>
-                    </div>
-                </div>
-                
-                <!-- Card 5 -->
-                <div class="about__card about__card-5">
-                    <img src="assets/Image/card-5.jpg" alt="Card 5 Image">
-                    <div class="about__card-info">
-                        <h3 class="about__card-title">Card 5</h3>
-                        <p class="about__card-description">Description for Card 5.</p>
-                    </div>
-                </div>
-                
-                <!-- Card 6 -->
-                <div class="about__card about__card-6">
-                    <img src="assets/Image/card-6.jpg" alt="Card 6 Image">
-                    <div class="about__card-info">
-                        <h3 class="about__card-title">Card 6</h3>
-                        <p class="about__card-description">Description for Card 6.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-
-        <!--==================== POPULAR ====================-->
-        <section class="popular section" id="popular">
-            <h1 class="section__title title">
-                Enjoy The Beauty <br>
-                Of The World
-            </h1>
-
-            <div class="popular__container container grid">
-                <article class="popular__card">
-                    <div class="popular__image">
-                        <img src="assets/Image/card-5.jpg" alt="popular image" class="popular__img">
-                        <div class="popular__shadow"></div>
-                    </div>
-                    
-                    <h2 class="popular__title">
-                        Bern
-                    </h2>
-                    
-                    <div class="popular__location">
-                        <i class="ri-map-pin-line"></i>
-                        <span>Switzerland</span>
-                    </div>
-                </article>
-                
-                <article class="popular__card">
-                    <div class="popular__image">
-                        <img src="assets/Image/popular-forest.jpg" alt="popular image" class="popular__img">
-                        <div class="popular__shadow"></div>
-                    </div>
-                    
-                    <h2 class="popular__title">
-                        Spike Forest
-                    </h2>
-                    
-                    <div class="popular__location">
-                        <i class="ri-map-pin-line"></i> 
-                        <span>Irland</span>
-                    </div>
-                </article>
-                
-                <article class="popular__card">
-                    <div class="popular__image">
-                        <img src="assets/Image/popular-lake.jpg" alt="popular image" class="popular__img">
-                        <div class="popular__shadow"></div>
-                    </div>
-                    
-                    <h2 class="popular__title">
-                        Garda Lake
-                    </h2>
-                    
-                    <div class="popular__location">
-                        <i class="ri-map-pin-line"></i>
-                        <span>Italy</span>
-                    </div>
-                </article>
-
-                <article class="popular__card">
-                    <div class="popular__image">
-                        <img src="assets/Image/borabora.jpg" alt="popular image" class="popular__img">
-                        <div class="popular__shadow"></div>
-                    </div>
-                    
-                    <h2 class="popular__title">
-                        Bora bora
-                    </h2>
-                    
-                    <div class="popular__location">
-                        <i class="ri-map-pin-line"></i> 
-                        <span>Prancis</span>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <!--==================== JOIN ====================-->
-        <section class="Subs section">
-            <div class="join__container container grid">
-                <div class="join__data">
-                    <h2 class="section__title">
-                        Your Journey <br>
-                        Start Here
-                    </h2>
-                    
-                    <p class="join__description">
-                        Get up to date with the latest 
-                        travel and information from us.
-                    </p>
-                </div>
-                <div class="join__form">
-                    <form>
-                        <input type="email" placeholder="Enter your email"/>
+                        </section>
                         
-                        <button id="join__button">
-                            Subscribe <i class="ri-arrow-right-line"></i>
-                        </button>
-                    </form>
-                </div>
-                
-            </div>
-        </section>
-    </main>
-
-    <!--==================== FOOTER ====================-->
-    <footer class="footer">
-        <div class="footer__container container grid">
-            <div class="footer__content grid">
-                <div>
-                    <a href="#" class="footer__logo">Travel</a>
-                    <p class="footer__description">
-                        Travel with us and explore <br> 
-                        the world without limits.
-                    </p>
-                </div>
-                
-                <div class="footer__data grid">
-                    <div>
-                        <h3 class="footer__title">About</h3>
-                        <ul class="footer__links">
-                            <li>
-                                <a href="#" class="footer__link">About Us</a>
-                            </li>
-                            <li>
-                                <a href="#" class="footer__link">Features</a>
-                            </li>
-                            <li>
-                                <a href="#" class="footer__link">News & Blog</a>
-                            </li>
-                        </ul>
+                        <!-- HOME SLIDER 3 -->
+                        <section class="swiper-slide" id="slide3">
+                            <div class="home__content grid">
+                                <div class="home__group">
+                                    <img src="assets/Image/hero-banner.png" alt="" class="home__img">
+                                    <div class="home__indicator"></div>
+                                    
+                                    <div class="home__details-img">
+                                        <h4 class="home__details-title">Travel with a Pro</h4>
+                                        <span class="home__details-subtitle">Adventure Guru</span>
+                                    </div>
+                                </div>
+                                <div class="home__data">
+                                    
+                                    <h3 class="home__subtitle">#3 Relax in Paradise</h3>
+                                    <h1 class="home__title">ESCAPE TO <br>TRANQUILITY</h1>
+                                    <p class="home__description">In need of a serene getaway? 
+                                        Our handpicked selection of idyllic beach and spa resorts will transport you to a world of tranquility.
+                                        Rejuvenate your body and soul in the lap of luxury while sipping cocktails by the ocean. It's time to indulge in pure relaxation
+                                    </p>
+                                    
+                                    <div class="home__buttons">
+                                        <a href="#" class="button">Start Your Journey</a>
+                                        <a href="#" class="button--link button--flex">See All<i class="ri-arrow-right-line"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
                     </div>
-                    <div>
-                    <h3 class="footer__title">Company</h3>
-                    <ul class="footer__links">
-                        <li>
-                            <a href="#" class="footer__link">FAQs</a>
-                        </li>
-                        <li>
-                            <a href="#" class="footer__link">History</a>
-                        </li>
-                        <li>
-                            <a href="#" class="footer__link">Testimonials</a>
-                        </li>
-                    </ul>
+                    <div class="swiper-pagination">
+                        <a href="#slide1"></a>
+                        <a href="#slide2"></a>
+                        <a href="#slide3"></a>
+                    </div>
                 </div>
-                
-                <div>
-                    <h3 class="footer__title">Contact</h3>
+            </section>
 
-                    <ul class="footer__links">
-                        <li>
-                            <a href="#" class="footer__link">Call Center</a>
-                        </li>
-                        <li>
-                            <a href="#" class="footer__link">Support Center</a>
-                        </li>
-                        <li>
-                            <a href="#" class="footer__link">Contact Us</a>
-                        </li>
-                    </ul>
+            <!--==================== ABOUT ====================-->
+            <section class="about section" id="about">
+                <div class="about__container container grid">
+                    <div class="about__image">
+                        <div class="about__col">
+                            <img src="assets/Image/card-5.jpg" alt="about image" />
+                        </div>
+
+                        <div class="about__col">
+                            <img src="assets/Image/borabora.jpg" alt="about image" />
+                            <img src="assets/Image/card-1.jpg" alt="about image" />
+                        </div>
+                    </div>
+                    <div class="about__data">
+                        <h2 class="section__title">
+                            About Travel
+                        </h2>
+                        
+                        <p class="about__description">
+                            All the trips around the world are a great 
+                            pleasure and happiness for anyone, enjoy 
+                            the sights when you travel the world. Travel 
+                            safely and without worries, get your trip and 
+                            explore the paradises of the world.
+                        </p>
+                        
+                        <a href="#" class="about__button button">
+                            Explore Travel <i class="ri-arrow-right-line button__icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== Popular ====================-->
+            <section class="popular section" id="popular">
+                <div class="popular container" id="popular">
+                    <h1 class="section__title">Enjoy The World <br>
+                    Of Beauty</h1>
+                    <div class="slider">
+                        <div class="swiper-wrapper">
+                            <!--Popular Slider 1-->
+                            <section class="swiper-slide" id="slide-1">
+                                <div class="popular__container container">
+                                    <div class="popular__content">
+                                        <div class="popular__tag">New</div>
+                                        <img src="assets/Image/card-4.jpg" alt="" class="popular__img">
+                                        <h2 class="popular__title">Morocco</h2>
+                                        <span class="popular__subtitle">Hotel</span>
+                        
+                                        <div class="popular__prices">
+                                            <span class="popular__price">$439</span>
+                                            <span class="popular__discount">$455</span>
+                                        </div>
+                        
+                                        <button class="button popular__button">
+                                            Book Now
+                                        </button>
+                                    </div>
+                
+                                    <div class="popular__content">
+                                        <div class="popular__tag">New</div>
+                                        <img src="assets/Image/card-5.jpg" alt="" class="popular__img">
+                                        <h2 class="popular__title">Bern</h2>
+                                        <span class="popular__subtitle">Switzerland</span>
+                        
+                                        <div class="popular__prices">
+                                            <span class="popular__price">$387</span>
+                                            <span class="popular__discount">$405</span>
+                                        </div>
+                        
+                                        <button class="button popular__button">
+                                            Book Now
+                                        </button>
+                                    </div>
+                
+                                    <div class="popular__content">
+                                        <div class="popular__tag">New</div>
+                                        <img src="assets/Image/card 3.jpg" alt="" class="popular__img">
+                                        <h2 class="popular__title">Spike Forest</h2>
+                                        <span class="popular__subtitle">Irland</span>
+                        
+                                        <div class="popular__prices">
+                                            <span class="popular__price">$310</span>
+                                            <span class="popular__discount">$355</span>
+                                        </div>
+                        
+                                        <button class="button popular__button">
+                                            Book Now
+                                        </button>
+                                    </div>
+                            </section>
+    
+                            <!--Popular Slider 2-->
+                            <section class="swiper-slide" id="slide-2">
+                                <div class="popular__container container">
+                                    <div class="popular__content">
+                                        <div class="popular__tag">New</div>
+                                        <img src="assets/Image/card-1.jpg" alt="" class="popular__img">
+                                        <h2 class="popular__title">Diavolezza</h2>
+                                        <span class="popular__subtitle">Switzerland</span>
+                                        
+                                        <div class="popular__prices">
+                                            <span class="popular__price">$455</span>
+                                            <span class="popular__discount">$480</span>
+                                        </div>
+                                        
+                                        <button class="button popular__button">
+                                            Book Now
+                                        </button>
+                                    </div>
+                                    
+                                    <div class="popular__content">
+                                        <div class="popular__tag">New</div>
+                                        <img src="assets/Image/card-2.jpg" alt="" class="popular__img">
+                                        <h2 class="popular__title">Logan Mountain</h2>
+                                        <span class="popular__subtitle">Canada</span>
+                                        
+                                        <div class="popular__prices">
+                                            <span class="popular__price">$370</span>
+                                            <span class="popular__discount">$400</span>
+                                        </div>
+                                        
+                                        <button class="button popular__button">
+                                            Book Now
+                                        </button>
+                                    </div>
+                                    
+                                    <div class="popular__content">
+                                        <div class="popular__tag">New</div>
+                                        <img src="assets/Image/card-4.jpg" alt="" class="popular__img">
+                                        <h2 class="popular__title">Morocco</h2>
+                                        <span class="popular__subtitle">Hotel</span>
+                                        
+                                        <div class="popular__prices">
+                                            <span class="popular__price">$432</span>
+                                            <span class="popular__discount">$455</span>
+                                        </div>
+                                        
+                                        <button class="button popular__button">
+                                            Book Now
+                                        </button>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="swiper-pagination">
+                            <a href="#slide-1"></a>
+                            <a href="#slide-2"></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== JOIN ====================-->
+            <section class="Subs section">
+                <div class="join__container container grid">
+                    <div class="join__data">
+                        <h2 class="section__title">
+                            Your Journey <br>
+                            Start Here
+                        </h2>
+                        
+                        <p class="join__description">
+                            Get up to date with the latest 
+                            travel and information from us.
+                        </p>
+                    </div>
+                    <div class="join__form">
+                        <form>
+                            <input type="email" placeholder="Enter your email" required/>
+                            
+                            <button id="join__button">
+                                Subscribe <i class="ri-arrow-right-line"></i>
+                            </button>
+                        </form>
+                    </div>
+                    
+                </div>
+            </section>
+        </main>
+        <!--==================== FOOTER ====================-->
+        <footer class="footer">
+            <div class="footer__container container grid">
+                <div class="footer__content grid">
+                    <div>
+                        <a href="#" class="footer__logo">Travel</a>
+                        
+                        <p class="footer__description">
+                            Travel with us and explore <br> 
+                            the world without limits.
+                        </p>
+                    </div>
+                    
+                    <div class="footer__data grid">
+                        <div>
+                            <h3 class="footer__title">About</h3>
+                            
+                            <ul class="footer__links">
+                                <li>
+                                    <a href="#" class="footer__link">About Us</a>
+                                </li>
+                                
+                                <li>
+                                    <a href="#" class="footer__link">Features</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer__link">News & Blog</a>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3 class="footer__title">Company</h3>
+                            <ul class="footer__links">
+                                <li>
+                                    <a href="#" class="footer__link">FAQs</a>
+                                </li>
+                                
+                                <li>
+                                    <a href="#" class="footer__link">History</a>
+                                </li>
+                                
+                                <li>
+                                    <a href="#" class="footer__link">Testimonials</a>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3 class="footer__title">Contact</h3>
+                            
+                            <ul class="footer__links">
+                                
+                                <li>
+                                    <a href="#" class="footer__link">Call Center</a>
+                                </li>
+                                
+                                <li>
+                                    <a href="#" class="footer__link">Support Center</a>
+                                </li>
+                                
+                                <li>
+                                    <a href="#" class="footer__link">Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            
+                            <h3 class="footer__title">Support</h3>
+                            <ul class="footer__links">
+                                <li>
+                                    <a href="#" class="footer__link">Privacy Policy</a>
+                                </li>
+                                
+                                <li>
+                                    <a href="#" class="footer__link">Terms & Services</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer__link">Payments</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
                 
-                <div>
-                    <h3 class="footer__title">Support</h3>
-                    <ul class="footer__links">
-                        <li>
-                            <a href="#" class="footer__link">Privacy Policy</a>
-                        </li>
-                        <li>
-                            <a href="#" class="footer__link">Terms & Services</a>
-                        </li>
-                        <li>
-                            <a href="#" class="footer__link">Payments</a>
-                        </li>
-                    </ul>
+                <div class="footer__group">
+                    <div class="footer__social">
+                        <a href="https://www.facebook.com" target="_blank" class="footer__social-link">
+                            <i class="ri-facebook-line"></i>
+                        </a>
+                        
+                        <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                        
+                        <a href="https://twitter.com/" target="_blank" class="footer__social-link">
+                            <i class="ri-twitter-line"></i>
+                        </a>
+                        
+                        <a href="https://www.youtube.com/" target="_blank" class="footer__social-link">
+                            <i class="ri-youtube-line"></i>
+                        </a>
+                    </div>
+                    
+                    <span class="footer__copy">
+                        Travel 2023
+                    </span>
                 </div>
             </div>
-        </div>
+        </footer>
         
-        <div class="footer__group">
-            <div class="footer__social">
-                <a href="https://www.facebook.com" target="_blank" class="footer__social-link">
-                    <i class="ri-facebook-line"></i>
-                </a>
-                <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
-                    <i class="ri-instagram-line"></i>
-                </a>
-                <a href="https://twitter.com/" target="_blank" class="footer__social-link">
-                    <i class="ri-twitter-line"></i>
-                </a>
-                <a href="https://www.youtube.com/" target="_blank" class="footer__social-link">
-                    <i class="ri-youtube-line"></i>
-                </a>
-            </div>
-            <span class="footer__copy"> Travel 2023
-            </span>
-        </div>
-    </div>
-</footer>
-    
-    <!--========== SCROLL UP ==========-->
-    <a href="#" class="scrollup" id="scroll-up">
-        <i class="ri-arrow-up-line"></i>
-    </a>
-    
-    <!--=============== Scroll JS ===============-->
-    <script src="assets/js/scrollreveal.js"></script>
-    <!--=============== MAIN JS ===============-->
-    <script src="assets/js/main.js"></script>
-</body>
+        <!--========== SCROLL UP ==========-->
+        <a href="#" class="scrollup" id="scroll-up"><i class="ri-arrow-up-line"></i></a>
+        <!--=============== SWIPER JS ===============-->
+        <script src="assets/js/swiper-bundle.js"></script>
+        <!--=============== Scroll JS ===============-->
+        <script src="assets/js/scrollreveal.js"></script>
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+    </body>
 </html>
         
         
