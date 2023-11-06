@@ -87,8 +87,8 @@ const sr = ScrollReveal({
 })
 
 sr.reveal(`.slider,.footer__container`)
-sr.reveal(`.join__form`, {origin: 'right'})
-sr.reveal(`.join__data`, {origin: 'left'})
+sr.reveal(`.join__form`,`.about__data` ,{origin: 'right'})
+sr.reveal(`.join__data`,`.about__image`, {origin: 'left'})
 sr.reveal(`.popular__container`, {interval: 200})
 
 

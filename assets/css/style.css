@@ -863,8 +863,14 @@ button {
         grid-template-columns: max-content;
     }
 
+    .join__container{
+        justify-content: center;
+    }
+
+
     .join__data,.join__form
     .join__data .section__title,.join__description {
+        justify-self: center;
         text-align: center;
     }
     
