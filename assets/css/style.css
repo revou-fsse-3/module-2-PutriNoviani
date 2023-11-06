@@ -213,7 +213,7 @@ button {
     align-items: center;
     column-gap: .5rem;
     font-weight: var(--font-medium);
-    animation: slideInOut 3s infinite;
+    animation: slideInOut 3s;
 }
 
 @keyframes slideInOut {
