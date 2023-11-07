@@ -689,6 +689,7 @@ button {
     border: none;
     padding: 1.25rem 1rem;
     background-color: var(--container-color);
+    color: var(--title-color);
     border-radius: 4rem;
     font-weight: var(--font-regular);
     font-size: var(--normal-font-size);
