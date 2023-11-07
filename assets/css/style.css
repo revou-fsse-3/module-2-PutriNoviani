@@ -440,8 +440,8 @@ button {
 }
 
 .swiper-pagination a{
-    height: 5px;
-    width: 5px;
+    height: 12px;
+    width: 12px;
     background-color: var(--title-color);
     border-radius: 50%;
     cursor: pointer;
@@ -450,8 +450,8 @@ button {
 }
 
 .swiper-pagination a:hover{
-    width: 1.5rem;
-    height: 5px;
+    width: 2rem;
+    height: 12px;
     border-radius: .5rem;
 }
 
