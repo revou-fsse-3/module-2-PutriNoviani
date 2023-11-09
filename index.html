@@ -5,8 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!--=============== REMIXICONS ===============-->
         <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
-        <!--=============== SWIPER CSS ===============--> 
-        <link rel="stylesheet" href="assets/CSS/swiper-bundle.min.css">
         <!--=============== CSS ===============-->
         <link rel="stylesheet" href="assets/css/style.css">
         <title>Responsive travel website</title>
@@ -160,7 +158,10 @@
                         </div>
 
                         <div class="about__col">
-                            <img src="assets/Image/borabora.jpg" alt="about image" />
+                            <picture class="gallery__picture">
+                                <source media="(max-width: 768px)" srcset="assets/Image/Borobudur.webp" />
+                                <img src="assets/Image/borabora.jpg" alt="about image"/>
+                            </picture>
                             <img src="assets/Image/card-1.jpg" alt="about image" />
                         </div>
                     </div>
@@ -445,9 +446,6 @@
         
         <!--========== SCROLL UP ==========-->
         <a href="#" class="scrollup" id="scroll-up"><i class="ri-arrow-up-line"></i></a>
-        <!--=============== SWIPER JS ===============-->
-        <script src="assets/js/swiper-bundle.js"></script>
-        <!--=============== Scroll JS ===============-->
         <script src="assets/js/scrollreveal.js"></script>
         <!--=============== MAIN JS ===============-->
         <script src="assets/js/main.js"></script>
