@@ -103,7 +103,7 @@ body {
 
 body.light-theme {
     --title-color: hsl(0, 0%, 5%);
-    --text-color: hsl(0, 0%, 30%);
+    --text-color: hsl(0, 0%, 20%);
     --text-color-light: hsl(0, 0%, 40%); 
     --body-color: hsl(0, 0%, 100%); 
     --container-color: hsl(0, 0%, 95%); 
@@ -544,7 +544,7 @@ button {
 
 .popular__content {
     position: relative;
-    background: var(--title-color-alt);
+    background: hsl(0, 0%, 10%);
     width: calc(33.333% - 20px);
     padding: 0rem;
     margin-bottom: 20px;
@@ -582,8 +582,8 @@ button {
     width: 25%;
     top: 5%;
     left: -5%;
-    background-color: var(--container-color);
-    color: var(--title-color);
+    background-color: hsl(0, 0%, 8%);
+    color: var(--title-color-alt);
     font-size: var(--small-font-size);
     text-align: right;
     padding: .25rem .5rem;
@@ -597,6 +597,7 @@ button {
     font-size: var(--h3-font-size);
     font-weight: var(--font-medium);
     transform: translateY(0);
+    color: var(--title-color-alt);
 }
 
 .popular__subtitle {
@@ -605,6 +606,7 @@ button {
     font-size: var(--small-font-size);
     margin-bottom: var(--mb-0-5);
     transform: translateY(0);
+    color: var(--title-color-alt);
 }
 
 .popular__prices {
@@ -612,11 +614,12 @@ button {
     display: block;
     align-items: center;
     column-gap: .5rem;
+    color: var(--title-color-alt);
 }
 
 .popular__price {
     font-weight: var(--font-medium);
-    color: var(--title-color);
+    color: var(--title-color-alt);
 }
 
 .popular__discount {
