@@ -3,4 +3,3 @@
 
 Deployment :https://responsive-website.putrinov.site/
 
-https://www.putrinov.site/
