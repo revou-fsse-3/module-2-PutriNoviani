@@ -1,6 +1,5 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/DUj7T_Sj)
 
-
 Visit responsive website travel at https://responsive-website.putrinov.site/
 
 ## Deployment Process
@@ -43,4 +42,6 @@ Visit responsive website travel at https://responsive-website.putrinov.site/
 ![](assets/documentation/cloudflare4.png)
 2. Go to your vercel dashboar, click domain at your deployment website and add domain. Check on your vercel dashboard to ensure your domain is properly cofigurated and connected to your netlify website
 ![](assets/documentation/vercel4.png)
+=======
+
 
